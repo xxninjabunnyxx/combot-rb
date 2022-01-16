@@ -1,0 +1,13 @@
+name: Main branch workflow
+on:
+  pull_request:
+    branches: main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    - name: Release Gem
+        uses: cadwallion/publish-rubygems-action@master
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_API_KEY}}
