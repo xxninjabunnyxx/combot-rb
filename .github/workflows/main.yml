@@ -6,6 +6,11 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    - uses: actions/checkout@v2
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.6
+        bundler-cache: true 
     - name: Release Gem
         uses: cadwallion/publish-rubygems-action@master
         env:
