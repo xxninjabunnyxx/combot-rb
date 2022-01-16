@@ -13,7 +13,7 @@ jobs:
           ruby-version: 2.6
           bundler-cache: true 
       - name: Release Gem
-        uses: cadwallion/publish-rubygems-action@master
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_API_KEY}}
+        uses: dawidd6/action-publish-gem@v1
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          api_key: ${{secrets.RUBYGEMS_API_KEY}}
