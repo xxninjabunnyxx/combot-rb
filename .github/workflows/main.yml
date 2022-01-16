@@ -15,5 +15,4 @@ jobs:
       - name: Release Gem
         uses: dawidd6/action-publish-gem@v1
         with:
-          github_token: ${{secrets.GITHUB_TOKEN}}
           api_key: ${{secrets.RUBYGEMS_API_KEY}}
